@@ -1,5 +1,5 @@
 {% set name = "burr" %}
-{% set version = "0.32.0" %}
+{% set version = "0.33.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/burr-{{ version }}.tar.gz
-  sha256: 1dec306d0efea84bef07170e26d566f6bd5fff9cc9c2b85c7b1d5fb780822868
+  sha256: cbb370057f45b718c1c4e62a8dcb19212df9bb2f26aae6c242993258024825b5
 
 build:
   entry_points:
@@ -24,11 +24,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=61.0
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -43,6 +43,7 @@ test:
     - burr-admin-generate-demo-data --help
     - burr-test-case --help
   requires:
+    - python {{ python_min }}
     - pip
     - aiofiles
     - click
