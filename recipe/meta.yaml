@@ -1,5 +1,5 @@
 {% set name = "burr" %}
-{% set version = "0.33.0" %}
+{% set version = "0.33.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/burr-{{ version }}.tar.gz
-  sha256: cbb370057f45b718c1c4e62a8dcb19212df9bb2f26aae6c242993258024825b5
+  sha256: 7bc49cf6a86be80c8fd4d6e1bf7f257539bef7797047f0f84ecdd8c592800d28
 
 build:
   entry_points:
