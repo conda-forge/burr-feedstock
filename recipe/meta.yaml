@@ -1,5 +1,5 @@
 {% set name = "burr" %}
-{% set version = "0.36.1" %}
+{% set version = "0.37.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/burr-{{ version }}.tar.gz
-  sha256: 13fbe6b3aed575a2e4b67d8a193baad685ebdbabb264b8dd06f0105b006d0b16
+  sha256: c140812cdd1623a86130df3ee63edaad5be00a30da84f36e916f62359252649e
 
 build:
   entry_points:
@@ -61,6 +61,7 @@ test:
     - sf-hamilton
     - streamlit
     - uvicorn
+    - aiosqlite
 
 about:
   summary: A state machine for data projects
