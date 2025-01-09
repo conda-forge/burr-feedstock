@@ -61,6 +61,7 @@ test:
     - sf-hamilton
     - streamlit
     - uvicorn
+    - aiosqlite
 
 about:
   summary: A state machine for data projects
